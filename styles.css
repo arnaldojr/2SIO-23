@@ -1,0 +1,120 @@
+
+:root {
+    --primary-color: #2C3E50;
+    --secondary-color: #ECF0F1;
+    --highlight-color: #E74C3C;
+    --card-bg-color: #FFFFFF;
+    --card-border-color: #BDC3C7;
+    --card-shadow-color: rgba(0, 0, 0, 0.1);
+    --card-highlight-color: rgba(44, 62, 80, 0.1);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    margin: 0;
+    padding: 0;
+}
+
+.banner {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 50px 0;
+    text-align: center;
+}
+
+.container {
+    padding: 50px;
+}
+
+h1, h2, h3 {
+    font-weight: lighter;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    border: 1px solid var(--card-border-color);
+    padding: 20px;
+    width: 300px;
+    background-color: var(--card-bg-color);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border: none;
+    box-shadow: 0 4px 8px var(--card-shadow-color);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px var(--card-shadow-color);
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+.card a {
+    display: block;
+    margin-top: 10px;
+    color: var(--highlight-color);
+    text-decoration: none;
+}
+
+.card a:hover, .card a:focus {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+/* Parallax effect for the header */
+.banner {
+    background: linear-gradient(rgba(44, 62, 80, 0.7), rgba(44, 62, 80, 0.9)), url('path-to-background-image.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/* About section styles */
+.about {
+    background-color: var(--secondary-color);
+    padding: 50px 0;
+    text-align: center;
+}
+
+.about p {
+    max-width: 800px;
+    margin: 20px auto 0;
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+/* Enhanced card hover effects */
+.card:hover {
+    background-color: var(--card-highlight-color);
+    box-shadow: 0 6px 15px var(--card-shadow-color);
+}
+
+/* Project filter styles */
+.project-filter {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.project-filter input {
+    padding: 10px 20px;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 5px;
+    border: 1px solid var(--card-border-color);
+    font-size: 1em;
+}
